@@ -8,7 +8,8 @@ Imports System.Net.SecurityProtocolType
 
 
 Public Class frmGPTChat
-
+    Dim sanswer As String
+    Dim typeanswer As String
     Dim OPENAI_API_KEY As String = "" 'https://beta.openai.com/account/api-keys
     Dim oSpeechRecognitionEngine As SpeechRecognitionEngine = Nothing
     Dim oSpeechSynthesizer As System.Speech.Synthesis.SpeechSynthesizer = Nothing
@@ -112,10 +113,18 @@ Public Class frmGPTChat
         txtAnswer.AppendText(DateTime.Now.ToString("HH:mm:ss") & " | Me: " & sQuestion & vbCrLf)
         txtQuestion.Text = ""
 
+
         Try
             Dim sAnswer As String = SendMsg(sQuestion)
-            txtAnswer.AppendText(DateTime.Now.ToString("HH:mm:ss") & " | GPT: " & sAnswer & vbCrLf)
             SpeechToText(sAnswer)
+            'txtAnswer.AppendText(DateTime.Now.ToString("HH:mm:ss") & " | GPT: " & sAnswer & vbCrLf)
+            'comment the FOR cycle and uncomment the line above to make answer appear without typing effect
+            For Each c As Char In DateTime.Now.ToString("HH:mm:ss") & " | GPT: " & sAnswer & vbCrLf
+                txtAnswer.AppendText(c)
+                Threading.Thread.Sleep(50)
+            Next
+
+
         Catch ex As Exception
             txtAnswer.AppendText("Error: " & ex.Message)
         End Try
@@ -137,7 +146,8 @@ Public Class frmGPTChat
             oSpeechSynthesizer.SelectVoice(cbVoice.Text)
         End If
 
-        oSpeechSynthesizer.Speak(s)
+        Dim threadSpeechToText As New Threading.Thread(Sub() oSpeechSynthesizer.Speak(s))
+        threadSpeechToText.Start()
 
     End Sub
 
@@ -262,7 +272,7 @@ Public Class frmGPTChat
 
     Private Sub txtQuestion_KeyUp(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles txtQuestion.KeyUp
         If e.KeyCode = Keys.Enter Then
-
+            Dim speed = Val(NumericUpDown1.Value)
             Dim sQuestion As String = txtQuestion.Text
             If sQuestion = "" Then
                 MsgBox("Type in your question!")
@@ -277,10 +287,18 @@ Public Class frmGPTChat
             txtAnswer.AppendText(DateTime.Now.ToString("HH:mm:ss") & " | Me: " & sQuestion & vbCrLf)
             txtQuestion.Text = ""
 
+
             Try
                 Dim sAnswer As String = SendMsg(sQuestion)
-                txtAnswer.AppendText(DateTime.Now.ToString("HH:mm:ss") & " | GPT: " & sAnswer & vbCrLf)
                 SpeechToText(sAnswer)
+                'txtAnswer.AppendText(DateTime.Now.ToString("HH:mm:ss") & " | GPT: " & sAnswer & vbCrLf)
+                'comment the FOR cycle and uncomment the line above to make answer appear without typing effect
+                For Each c As Char In DateTime.Now.ToString("HH:mm:ss") & " | GPT: " & sAnswer & vbCrLf
+                    txtAnswer.AppendText(c)
+                    Threading.Thread.Sleep(speed)
+                Next
+
+
             Catch ex As Exception
                 txtAnswer.AppendText("Error: " & ex.Message)
             End Try
@@ -307,4 +325,6 @@ Public Class frmGPTChat
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         txtAnswer.Clear()
     End Sub
+
+   
 End Class

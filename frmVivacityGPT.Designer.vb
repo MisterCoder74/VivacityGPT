@@ -46,10 +46,13 @@ Partial Class frmGPTChat
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnSend
@@ -61,10 +64,10 @@ Partial Class frmGPTChat
         Me.btnSend.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnSend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSend.Location = New System.Drawing.Point(10, 19)
+        Me.btnSend.Location = New System.Drawing.Point(5, 22)
         Me.btnSend.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSend.Name = "btnSend"
-        Me.btnSend.Size = New System.Drawing.Size(57, 59)
+        Me.btnSend.Size = New System.Drawing.Size(40, 40)
         Me.btnSend.TabIndex = 0
         Me.ToolTip1.SetToolTip(Me.btnSend, "Send Prompt")
         Me.btnSend.UseVisualStyleBackColor = False
@@ -99,7 +102,7 @@ Partial Class frmGPTChat
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(7, 22)
+        Me.Label2.Location = New System.Drawing.Point(7, 21)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(140, 17)
@@ -112,7 +115,7 @@ Partial Class frmGPTChat
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 49)
+        Me.Label3.Location = New System.Drawing.Point(7, 48)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(185, 17)
@@ -194,9 +197,9 @@ Partial Class frmGPTChat
         Me.chkListen.Location = New System.Drawing.Point(5, 18)
         Me.chkListen.Margin = New System.Windows.Forms.Padding(2)
         Me.chkListen.Name = "chkListen"
-        Me.chkListen.Size = New System.Drawing.Size(157, 21)
+        Me.chkListen.Size = New System.Drawing.Size(156, 21)
         Me.chkListen.TabIndex = 13
-        Me.chkListen.Text = "Enable resognition"
+        Me.chkListen.Text = "Enable recognition"
         Me.chkListen.UseVisualStyleBackColor = False
         '
         'chkMute
@@ -236,7 +239,7 @@ Partial Class frmGPTChat
         Me.GroupBox1.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(307, 434)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(200, 102)
+        Me.GroupBox1.Size = New System.Drawing.Size(290, 102)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Speech"
@@ -245,7 +248,7 @@ Partial Class frmGPTChat
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(219, 19)
+        Me.TextBox1.Location = New System.Drawing.Point(219, 18)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(44, 24)
@@ -274,10 +277,10 @@ Partial Class frmGPTChat
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(132, 19)
+        Me.Button1.Location = New System.Drawing.Point(93, 22)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(57, 59)
+        Me.Button1.Size = New System.Drawing.Size(40, 40)
         Me.Button1.TabIndex = 20
         Me.ToolTip1.SetToolTip(Me.Button1, "Clear Chat")
         Me.Button1.UseVisualStyleBackColor = False
@@ -291,10 +294,10 @@ Partial Class frmGPTChat
         Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(71, 19)
+        Me.Button2.Location = New System.Drawing.Point(49, 22)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(57, 59)
+        Me.Button2.Size = New System.Drawing.Size(40, 40)
         Me.Button2.TabIndex = 21
         Me.ToolTip1.SetToolTip(Me.Button2, "Save Chat")
         Me.Button2.UseVisualStyleBackColor = False
@@ -307,9 +310,9 @@ Partial Class frmGPTChat
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.btnSend)
         Me.GroupBox2.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(919, 434)
+        Me.GroupBox2.Location = New System.Drawing.Point(990, 434)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(203, 102)
+        Me.GroupBox2.Size = New System.Drawing.Size(142, 102)
         Me.GroupBox2.TabIndex = 22
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Actions"
@@ -317,6 +320,8 @@ Partial Class frmGPTChat
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.TextBox1)
         Me.GroupBox3.Controls.Add(Me.Label3)
@@ -324,7 +329,7 @@ Partial Class frmGPTChat
         Me.GroupBox3.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(4, 434)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(287, 100)
+        Me.GroupBox3.Size = New System.Drawing.Size(287, 102)
         Me.GroupBox3.TabIndex = 23
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Parameters"
@@ -337,12 +342,36 @@ Partial Class frmGPTChat
         Me.GroupBox4.Controls.Add(Me.cbVoice)
         Me.GroupBox4.Controls.Add(Me.lblVoice)
         Me.GroupBox4.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(524, 434)
+        Me.GroupBox4.Location = New System.Drawing.Point(603, 434)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(310, 102)
         Me.GroupBox4.TabIndex = 24
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Bot features"
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Increment = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown1.Location = New System.Drawing.Point(219, 72)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(44, 24)
+        Me.NumericUpDown1.TabIndex = 16
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(7, 72)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(142, 17)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "Typing Speed (ms)"
         '
         'frmGPTChat
         '
@@ -376,6 +405,7 @@ Partial Class frmGPTChat
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -403,4 +433,6 @@ Partial Class frmGPTChat
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
 End Class
