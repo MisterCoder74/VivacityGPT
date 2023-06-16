@@ -153,8 +153,9 @@ Public Class frmGPTChat
 
     Function SendMsg(ByVal sQuestion As String)
 
-        System.Net.ServicePointManager.SecurityProtocol =
-           System.Net.SecurityProtocolType.Tls Or Ssl3
+        System.Net.ServicePointManager.SecurityProtocol = DirectCast(3072, System.Net.SecurityProtocolType)
+
+
 
         Dim apiEndpoint As String = "https://api.openai.com/v1/completions"
         Dim request As HttpWebRequest = WebRequest.Create(apiEndpoint)
@@ -204,8 +205,10 @@ Public Class frmGPTChat
     Private Sub SetModels()
         'https://beta.openai.com/docs/models/gpt-3
 
-        System.Net.ServicePointManager.SecurityProtocol =
-           System.Net.SecurityProtocolType.Tls Or Ssl3
+        'System.Net.ServicePointManager.SecurityProtocol =            System.Net.SecurityProtocolType.Tls Or Ssl3
+
+        System.Net.ServicePointManager.SecurityProtocol = DirectCast(3072, System.Net.SecurityProtocolType)
+
 
 
         Dim apiEndpoint As String = "https://api.openai.com/v1/models"

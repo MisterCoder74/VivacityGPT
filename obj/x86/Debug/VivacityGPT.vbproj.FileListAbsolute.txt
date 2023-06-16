@@ -8,3 +8,13 @@ C:\VB NET\VISUAL BASIC PROJECTS\VivacityGPT\VivacityGPT\obj\x86\Debug\VivacityGP
 C:\VB NET\VISUAL BASIC PROJECTS\VivacityGPT\VivacityGPT\obj\x86\Debug\VivacityGPT.exe
 C:\VB NET\VISUAL BASIC PROJECTS\VivacityGPT\VivacityGPT\obj\x86\Debug\VivacityGPT.xml
 C:\VB NET\VISUAL BASIC PROJECTS\VivacityGPT\VivacityGPT\obj\x86\Debug\VivacityGPT.pdb
+C:\Users\Utente\Documents\GitHub\VivacityGPT\bin\Debug\VivacityGPT.exe.config
+C:\Users\Utente\Documents\GitHub\VivacityGPT\bin\Debug\VivacityGPT.exe
+C:\Users\Utente\Documents\GitHub\VivacityGPT\bin\Debug\VivacityGPT.pdb
+C:\Users\Utente\Documents\GitHub\VivacityGPT\bin\Debug\VivacityGPT.xml
+C:\Users\Utente\Documents\GitHub\VivacityGPT\obj\x86\Debug\VivacityGPT.frmGPTChat.resources
+C:\Users\Utente\Documents\GitHub\VivacityGPT\obj\x86\Debug\VivacityGPT.Resources.resources
+C:\Users\Utente\Documents\GitHub\VivacityGPT\obj\x86\Debug\VivacityGPT.vbproj.GenerateResource.Cache
+C:\Users\Utente\Documents\GitHub\VivacityGPT\obj\x86\Debug\VivacityGPT.exe
+C:\Users\Utente\Documents\GitHub\VivacityGPT\obj\x86\Debug\VivacityGPT.xml
+C:\Users\Utente\Documents\GitHub\VivacityGPT\obj\x86\Debug\VivacityGPT.pdb
